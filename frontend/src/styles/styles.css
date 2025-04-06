@@ -1,0 +1,466 @@
+/* 📌 General Styling */
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f4f7f6;
+    margin: 0;
+    display: flex;
+    color: #333;
+}
+
+/* 📌 Sidebar */
+.sidebar {
+    width: 280px;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 📌 Navbar */
+.navbar {
+    background: white;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 280px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 22px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    color: #2c3e50;
+}
+
+/* 📌 Main Content */
+.main-content {
+    margin-left: 280px;
+    margin-top: 80px;
+    padding: 30px;
+    width: calc(100% - 280px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 📌 Page Titles */
+.page-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* 📌 Blog Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+}
+
+/* 📌 Blog Card */
+.blog-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    color: #2c3e50;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #1a1a1a;
+}
+
+.blog-card .author {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.blog-card .excerpt {
+    font-size: 16px;
+    color: #333;
+}
+
+/* 📌 Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 14px;
+    margin-right: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+/* View Button */
+.view-btn {
+    background: #007bff;
+    color: white;
+}
+
+.view-btn:hover {
+    background: #0056b3;
+}
+
+/* Edit Button */
+.edit-btn {
+    background: #f39c12;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #e67e22;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+/* 📌 Form Container */
+.form-container, .edit-form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    color: #333;
+}
+
+.form-container:hover, .edit-form-container:hover {
+    transform: translateY(-5px);
+}
+
+/* 📌 Blog Form */
+.blog-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-field:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+.textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* 📌 Read Blog (View Blog Page) Styling */
+.blog-read-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.blog-read-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.blog-read-author {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.blog-read-content {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 📌 Back Button */
+.back-btn {
+    background: #007bff;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    background: #0056b3;
+}
+
+/* 📌 Smooth Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 📌 Loading Text */
+.loading-text {
+    font-size: 18px;
+    color: #777;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* 📌 Auth Page Styling */
+.auth-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.auth-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.auth-form input:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+.auth-btn {
+    background: #28a745;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.auth-btn:hover {
+    background: #218838;
+}
+
+.switch-auth {
+    color: #007bff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.switch-auth:hover {
+    text-decoration: underline;
+}
+
+/* 📌 Smooth Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 📌 Blog Read Page Styling */
+.blog-read-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.blog-read-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.blog-read-author {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.blog-read-content {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 📌 Comments Section */
+.comments-section {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.comments-section h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* 📌 Comment Form */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.comment-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.comment-btn:hover {
+    background: #0056b3;
+}
+
+/* 📌 Comment List */
+.comments-list {
+    margin-top: 20px;
+}
+
+.comment {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+.comment-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.comment-author {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+}
